@@ -1,5 +1,5 @@
-import type {ContextPathFunc, RegExpLike} from './generic-types.js';
-import {combineTrigger, ensureTriggerChild} from './path.js';
+import type { ContextPathFunc, RegExpLike } from './generic-types.js';
+import { combineTrigger, ensureTriggerChild } from './path.js';
 
 export type ActionFunc<Context> = ContextPathFunc<Context, string | boolean>;
 
@@ -23,8 +23,7 @@ export class ActionHive<Context> {
 			.includes(trigger.source);
 		if (alreadyExisting) {
 			throw new Error(
-				`The unique identifier "${
-					trigger.source.slice(0, -1)
+				`The unique identifier "${trigger.source.slice(0, -1)
 				}" you wanna add was already added. When you hit the button only the first one will be used and not both. This one can not be accessed then. Change the unique identifier code to something different.`,
 			);
 		}
@@ -32,9 +31,9 @@ export class ActionHive<Context> {
 		this.#actions.add({
 			trigger,
 			async doFunction(context, path) {
-				if (await hide?.(context, path)) {
-					return '.';
-				}
+				// if (await hide?.(context, path)) {
+				// 	return '.';
+				// }
 
 				return doFunction(context, path);
 			},
@@ -43,7 +42,7 @@ export class ActionHive<Context> {
 
 	list(path: RegExpLike): ReadonlySet<ButtonAction<Context>> {
 		const result = new Set<ButtonAction<Context>>();
-		for (const {trigger, doFunction} of this.#actions) {
+		for (const { trigger, doFunction } of this.#actions) {
 			result.add({
 				trigger: combineTrigger(path, trigger),
 				doFunction,
