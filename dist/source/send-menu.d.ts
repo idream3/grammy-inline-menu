@@ -1,4 +1,4 @@
-import type { Api, Context as BaseContext } from 'grammy';
+import type { Api, Context as BaseContext } from 'https://deno.land/x/grammy@v1.34.0/mod.ts';
 import type { Message } from 'grammy/types';
 import type { MenuLike } from './menu-like.js';
 /** Generic Method which is able to send a menu to a context (given a path where it is) */

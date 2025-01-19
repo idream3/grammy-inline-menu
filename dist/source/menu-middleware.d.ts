@@ -1,4 +1,4 @@
-import { type Context as BaseContext } from 'grammy';
+import { type Context as BaseContext } from 'https://deno.land/x/grammy@v1.34.0/mod.ts';
 import type { RegExpLike } from './generic-types.js';
 import type { MenuLike } from './menu-like.js';
 import { type SendMenuFunc } from './send-menu.js';

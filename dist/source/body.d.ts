@@ -1,4 +1,4 @@
-import type { InputFile } from 'grammy';
+import type { InputFile } from 'https://deno.land/x/grammy@v1.34.0/mod.ts';
 import type { LabeledPrice, Location, MessageEntity, ParseMode, Venue } from 'grammy/types';
 import type { ReadonlyDeep } from 'type-fest';
 export type Body = string | TextBody | MediaBody | LocationBody | VenueBody | InvoiceBody;

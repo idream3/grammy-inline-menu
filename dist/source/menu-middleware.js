@@ -1,4 +1,4 @@
-import { Composer } from 'grammy';
+import { Composer } from 'https://deno.land/x/grammy@v1.34.0/mod.ts';
 import { combinePath, combineTrigger, createRootMenuTrigger } from './path.js';
 import { editMenuOnContext, replyMenuToContext, } from './send-menu.js';
 export class MenuMiddleware {
