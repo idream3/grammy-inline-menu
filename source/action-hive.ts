@@ -31,9 +31,9 @@ export class ActionHive<Context> {
 		this.#actions.add({
 			trigger,
 			async doFunction(context, path) {
-				// if (await hide?.(context, path)) {
-				// 	return '.';
-				// }
+				if (await hide?.(context, path)) {
+					// return '.';
+				}
 
 				return doFunction(context, path);
 			},
